@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +30,11 @@ ALLOWED_HOSTS = ['*']
 # CSRF_TRUSTED_ORIGINS = [
 #     'https://django-ecommerce-backend.onrender.com', 'https://*.127.0.0.1']
 
-CORS_ORIGIN_ALLOW_ALL = True
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Application definition
